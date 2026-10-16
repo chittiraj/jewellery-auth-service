@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: jewellery-auth-service
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+jwt:
+  secret: "${JWT_SECRET}"
+  expiration-ms: 3600000
+
+admin-setup:
+  key: ${ADMIN_SETUP_KEY:}
